@@ -45,9 +45,8 @@ public class RegistrationForm extends JDialog{
         btnLoginHandling.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
-                //LoginForm myLoginForm = new LoginForm(null);
-                //dispose();
+                dispose();
+                LoginForm myLoginForm = new LoginForm(null);
             }
 
         });
@@ -127,7 +126,7 @@ public class RegistrationForm extends JDialog{
     }
 
     public static void main(String[] args) {
-        LoginForm myLoginForm = new LoginForm(null);
+        //LoginForm myLoginForm = new LoginForm(null);
         RegistrationForm myForm = new RegistrationForm(null);
         /*
         User user = myForm.user;

@@ -35,6 +35,14 @@ public class LoginForm extends JDialog{
                 dispose();
             }
         });
+
+        btnRegisterHandling.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dispose();
+                RegistrationForm myForm1 = new RegistrationForm(null);
+            }
+        });
         setVisible(true);
     }
 }
