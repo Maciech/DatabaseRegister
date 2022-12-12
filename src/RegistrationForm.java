@@ -17,12 +17,13 @@ public class RegistrationForm extends JDialog{
     private JButton btnRegister;
     private JButton btnCancel;
     private JPanel registerPanel;
+    private JButton btnLoginHandling;
 
     public RegistrationForm(JFrame parent){
         super(parent);
         setTitle("Create a new account");
         setContentPane(registerPanel);
-        setMinimumSize(new Dimension(520, 560));
+        setMinimumSize(new Dimension(620, 660));
         setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -39,6 +40,16 @@ public class RegistrationForm extends JDialog{
             public void actionPerformed(ActionEvent actionEvent) {
                 dispose();
             }
+        });
+
+        btnLoginHandling.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                //LoginForm myLoginForm = new LoginForm(null);
+                //dispose();
+            }
+
         });
         setVisible(true);
     }
@@ -116,12 +127,17 @@ public class RegistrationForm extends JDialog{
     }
 
     public static void main(String[] args) {
+        LoginForm myLoginForm = new LoginForm(null);
         RegistrationForm myForm = new RegistrationForm(null);
+        /*
         User user = myForm.user;
             if (user != null){
                 System.out.println("Succesful registration of: " + user.name);
             } else {
                 System.out.println("Registration canceled");
             }
+
+         */
     }
+
 }
